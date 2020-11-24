@@ -1,0 +1,12 @@
+{
+  "name": "@zxin/js-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "auooru",
+  "license": "MIT",
+  "private": false,
+  "sideEffects": true,
+  "devDependencies": {
+    "eslint": "^7.14.0"
+  }
+}

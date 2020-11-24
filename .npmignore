@@ -1,0 +1,15 @@
+/.gitee
+/.github
+/node_modules
+/src
+/test
+
+.editorconfig
+.eslintrc.js
+.travis.yml
+
+tsconfig.json
+yarn.lock
+package-lock.json
+babel.config.js
+vue.config.js

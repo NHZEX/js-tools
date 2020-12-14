@@ -7,6 +7,9 @@
   "license": "MIT",
   "private": false,
   "sideEffects": true,
+  "scripts": {
+    "test": "ava"
+  },
   "devDependencies": {
     "ava": "^3.14.0",
     "eslint": "^7.14.0"

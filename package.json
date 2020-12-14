@@ -2,11 +2,16 @@
   "name": "@zxin/js-tools",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "author": "auooru",
   "license": "MIT",
   "private": false,
   "sideEffects": true,
   "devDependencies": {
+    "ava": "^3.14.0",
     "eslint": "^7.14.0"
+  },
+  "dependencies": {
+    "node-forge": "^0.10.0"
   }
 }

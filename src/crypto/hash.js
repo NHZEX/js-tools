@@ -1,4 +1,4 @@
-import md from "node-forge/lib/md.all";
+import md from "node-forge/lib/md.all.js";
 
 /**
  * @param {String} algo md5, sha1 sha256 sha384 sha512
@@ -11,4 +11,8 @@ export function hash (algo, data, rawOutput = false) {
   hash.update(data, 'utf8')
   const result = hash.digest()
   return rawOutput ? result.getBytes() : result.toHex()
+}
+
+export default {
+  hash,
 }

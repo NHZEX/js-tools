@@ -5,7 +5,7 @@
 /test
 
 .editorconfig
-.eslintrc.js
+.eslintrc.cjs
 .travis.yml
 
 tsconfig.json

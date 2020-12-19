@@ -1,6 +1,6 @@
-import random from "node-forge/lib/random";
-import cipher from "node-forge/lib/cipher";
-import util from "node-forge/lib/util";
+import random from "node-forge/lib/random.js";
+import cipher from "node-forge/lib/cipher.js";
+import util from "node-forge/lib/util.js";
 
 /**
  * @param {String} data
@@ -44,4 +44,9 @@ export function aes_gcm_decrypt (data, key) {
     return aes.output.getBytes()
   }
   return false
+}
+
+export default {
+  aes_gcm_encrypt,
+  aes_gcm_decrypt,
 }

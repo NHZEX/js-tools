@@ -1,4 +1,4 @@
-import {base64_decode, base64_encode, randomBytes, randomHex} from '../src/crypto/util.js';
+import {base64_decode, base64_encode, random_bytes, random_hex} from '../src/crypto/util.js';
 import test from "ava";
 
 test('base64', t => {
@@ -9,9 +9,9 @@ test('base64', t => {
 })
 
 test('random', t => {
-  const resultBytes = randomBytes(12);
+  const resultBytes = random_bytes(12);
   t.is(resultBytes.length, 12)
 
-  const resultHex = randomHex(12);
+  const resultHex = random_hex(12);
   t.is(resultHex.length, 12)
 })

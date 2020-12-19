@@ -1,5 +1,6 @@
 import {base64_decode, base64_encode, random_bytes, random_hex} from '../src/crypto/util.js';
 import {hash, hash_md5, hash_sha1, hash_sha256, hash_sha512} from '../src/crypto/hash.js';
+import {aes_gcm_encrypt, aes_gcm_decrypt} from '../src/crypto/aes.js';
 import test from "ava";
 
 test('base64', t => {
@@ -48,4 +49,14 @@ test('hash_sha512', t => {
   const text = '123456qweasd请问阿斯顿';
 
   t.is(hash_sha512(text), '3f9556e4b888837a78112f6aac41f093666aa42631232308b31bcaf9fcc6f3137fda8e213065a9223a0992bdffe3ad13ba6737975f954e30ebfe48554e318516')
+})
+
+test('aes_gcm', t => {
+  const plaintext = '123456qweasd请问阿斯顿';
+  const key = '0123456789ABCDEF'
+
+  const ciphertext = aes_gcm_encrypt(plaintext, key, 'utf8');
+  const decryptPlaintext = aes_gcm_decrypt(ciphertext, key, 'utf8');
+
+  t.is(decryptPlaintext, plaintext)
 })

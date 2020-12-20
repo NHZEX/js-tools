@@ -1,7 +1,7 @@
 /.gitee
 /.github
+/.idea
 /node_modules
-/src
 /test
 
 .editorconfig

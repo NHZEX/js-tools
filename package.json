@@ -1,7 +1,7 @@
 {
-  "name": "@zxin/js-tools",
+  "name": "@ozxin/js-tools",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "author": "auooru",
   "license": "MIT",
@@ -16,5 +16,9 @@
   },
   "dependencies": {
     "node-forge": "^0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NHZEX/js-tools"
   }
 }

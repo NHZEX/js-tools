@@ -8,10 +8,16 @@
   "private": false,
   "sideEffects": true,
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "coverage": "c8 --reporter=html --reporter=text ava"
   },
   "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/core": "^7.12",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
     "ava": "^3.14.0",
+    "c8": "^7.4.0",
     "eslint": "^7.14.0"
   },
   "dependencies": {
@@ -20,5 +26,26 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/NHZEX/js-tools"
+  },
+  "ava": {
+    "require": [
+      "@babel/register"
+    ],
+    "babel": {
+      "testOptions": {
+        "plugins": [],
+        "presets": [
+          [
+            "@babel/preset-env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    "verbose": true
   }
 }

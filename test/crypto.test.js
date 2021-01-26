@@ -62,11 +62,21 @@ test('hash_hmac', t => {
 })
 
 test('aes_gcm', t => {
-  const plaintext = '123456qweasd请问阿斯顿';
-  const key = '0123456789ABCDEF'
+  let plaintext, ciphertext, key, decryptPlaintext
 
-  const ciphertext = aes_gcm_encrypt(plaintext, key, 'utf8');
-  const decryptPlaintext = aes_gcm_decrypt(ciphertext, key, 'utf8');
+  plaintext = '123456qweasd请问阿斯顿';
+  key = '0123456789ABCDEF'
+
+  ciphertext = aes_gcm_encrypt(plaintext, key, 'utf8');
+  decryptPlaintext = aes_gcm_decrypt(ciphertext, key, 'utf8');
+
+  t.is(decryptPlaintext, plaintext)
+
+  plaintext = '123456qweasd';
+  key = '0123456789ABCDEF'
+
+  ciphertext = aes_gcm_encrypt(plaintext, key, 'raw');
+  decryptPlaintext = aes_gcm_decrypt(ciphertext, key, 'raw');
 
   t.is(decryptPlaintext, plaintext)
 })

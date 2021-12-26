@@ -52,8 +52,18 @@ function substrOccurrences(string, subString, allowOverlapping) {
   return n;
 }
 
+/**
+ * @param {Number} size
+ * @param {Number} startAt
+ * @return {Number[]}
+ */
+export function rangeInt (size, startAt = 0) {
+  return [...Array(size).keys()].map(i => i + startAt)
+}
+
 export default {
   sleep,
   sleepSeq,
   substrOccurrences,
+  rangeInt,
 }

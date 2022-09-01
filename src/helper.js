@@ -7,13 +7,18 @@ function sleep (ms) {
 }
 
 /**
- * @param {Array} sleepTimes
+ * @param {Array} sleepTimes example: [[1000, 2], [2000, 3], [3000, 5], [5000, 10], [10000, 0]]
  * @return {(function(): Promise<void>)|*}
  */
 function sleepSeq (sleepTimes) {
     let sleepIndex = 0;
     let sleepCount = 0;
-    return async function () {
+    return async function (reset = false) {
+        if (reset) {
+            sleepIndex = 0
+            sleepCount = 0
+            return
+        }
         if (sleepIndex < sleepTimes.length - 1) {
             if (sleepCount > sleepTimes[sleepIndex][1]) {
                 sleepCount = 1

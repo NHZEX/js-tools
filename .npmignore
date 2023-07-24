@@ -3,10 +3,10 @@
 /.idea
 /node_modules
 /test
+/coverage
 
 .editorconfig
 .eslintrc.cjs
-.travis.yml
 
 tsconfig.json
 yarn.lock

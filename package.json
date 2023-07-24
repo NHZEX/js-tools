@@ -7,6 +7,10 @@
   "license": "MIT",
   "private": false,
   "sideEffects": true,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "^pnpm@6.7.0",
   "scripts": {
     "test": "ava",
     "coverage": "c8 --reporter=html --reporter=text ava"
